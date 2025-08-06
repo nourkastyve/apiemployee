@@ -14,6 +14,12 @@ import lombok.NoArgsConstructor;
 public class Employee {
     @Id //to indicat that the primary key of the DataBase
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Informs that the attribute will be manager by the database
-    private Long id;
+    private Long id; //
+    @Column(name = "first_name") // Informs that the name in the DataBase
+    private String firstname;
+    @Column(name = "last_name") // Informs that the name in the DataBase
+    private String lastName;
 
+    private String mail;
+    private  String password;
 }
